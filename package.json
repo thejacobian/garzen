@@ -1,0 +1,30 @@
+{
+  "name": "garzen",
+  "version": "1.0.0",
+  "description": "Garden designer app backend to help you feel at peace with your plants",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thejacobian/garzen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thejacobian/garzen/issues"
+  },
+  "homepage": "https://github.com/thejacobian/garzen#readme",
+  "dependencies": {
+    "@apollo/server": "^4.12.0",
+    "graphql": "^16.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "typescript": "^5.8.3"
+  }
+}

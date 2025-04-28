@@ -1,0 +1,22 @@
+services:
+    database:
+        image: mysql:8.0.42
+        restart: always
+        environment:
+            - 'MYSQL_ROOT_PASSWORD=012345'
+            - 'MYSQL_DATABASE=garzen'
+            - 'MYSQL_USER=graphql'
+            - 'MYSQL_PASSWORD=012345'
+        ports:
+            - 8006:3306
+        volumes:
+            - mysql_data:/var/lib/mysql
+    adminer:
+        image: adminer:latest
+        restart: always
+        ports:
+            - 8080:8080
+        links:
+            - database
+volumes:
+    mysql_data: {}
